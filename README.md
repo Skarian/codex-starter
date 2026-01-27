@@ -17,6 +17,11 @@ I've found this approach to deliver significantly higher code quality than the d
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/Skarian/codex-starter/main/scripts/sync-codex-starter.sh)"
 ```
 
+### How to customize this setup
+
+- If you want to tailor this setup, clone the repo locally first
+- If you want to use Codex (or another coding agent) while editing, run `bash scripts/toggle-agents.sh` (or `chmod +x scripts/toggle-agents.sh` and `./scripts/toggle-agents.sh`) to swap `AGENTS.md` with `AGENTS-draft.md` and prevent the agent from treating it as live instructions
+
 ### Starter Goals:
 
 - Avoid vibe-coding by providing explicit guidance and structure
@@ -60,12 +65,6 @@ web_search_request = true
   - tests
   - naming schemes
   - source code modularity and repo structure
-
-### Customization note
-
-- If you want to tailor this starter to your use-case, clone the repo locally first
-- Run `bash scripts/toggle-agents.sh` (or `chmod +x scripts/toggle-agents.sh` and `./scripts/toggle-agents.sh`) to switch between `AGENTS.md` and `AGENTS-draft.md`
-- This prevents Codex from treating `AGENTS.md` as live instructions and populating templates while you edit
 
 ### Sources
 
