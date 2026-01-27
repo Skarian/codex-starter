@@ -10,16 +10,12 @@ I've found this approach to deliver significantly higher code quality than the d
 - Asks before overwriting any existing file
 - Skips `README.md`, `.gitignore`, and `scripts/`
 - Leaves your repo’s `.git` and history untouched
+- Works on macOS and Linux (on Windows, use WSL or Git Bash)
+- In `AGENTS.md`, fill in **Project-specific configuration** (build/lint/test/typecheck/docs commands)
 
 ```
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/Skarian/codex-starter/main/scripts/sync-codex-starter.sh)"
 ```
-
-Works on macOS and Linux. On Windows, use WSL or Git Bash
-
-### Project-specific setup
-
-In `AGENTS.md`, fill in **Project-specific configuration** (build/lint/test/typecheck/docs commands)
 
 ### Starter Goals:
 
