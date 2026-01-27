@@ -43,6 +43,16 @@ web_search_request = true
 1. Copy `AGENTS.md`, `CONTINUITY.md`, and the `.agent/` directory into the repo (including `.agent/execplans/INDEX.md`).
 2. In `AGENTS.md`, fill in **Project-specific configuration** (build/lint/test/typecheck/docs commands).
 
+### Sync script (optional)
+
+Run this from the repo root to pull the latest starter files (prompts before each overwrite, never deletes, excludes `README.md` and the sync script itself):
+
+```
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/Skarian/codex-starter/main/scripts/sync-codex-starter.sh)"
+```
+
+Works on macOS and Linux. On Windows, use WSL or Git Bash.
+
 ### TODOs:
 
 - Explore adding skills (ex: git worktrees)
