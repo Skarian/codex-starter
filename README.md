@@ -61,10 +61,14 @@ web_search_request = true
   - naming schemes
   - source code modularity and repo structure
 
-### Development note
+### Customization note
 
-If you plan to use Codex to modify this repo, rename `AGENTS.md` to something else first; otherwise Codex may treat it as instructions and start populating the templates
+- If you want to tailor this starter to your use-case, clone the repo locally first
+- Run `bash scripts/toggle-agents.sh` (or `chmod +x scripts/toggle-agents.sh` and `./scripts/toggle-agents.sh`) to switch between `AGENTS.md` and `AGENTS-draft.md`
+- This prevents Codex from treating `AGENTS.md` as live instructions and populating templates while you edit
 
 ### Sources
 
-- https://developers.openai.com/cookbook/articles/codex_exec_plans
+- PLANS.md inspiration: https://developers.openai.com/cookbook/articles/codex_exec_plans
+- AGENTS.md framework: https://www.reddit.com/r/codex/comments/1qli5m3/comment/o1fjzgf/
+- CONTINUITY.md idea: https://www.reddit.com/r/codex/comments/1qli5m3/comment/o1fw2gr/
