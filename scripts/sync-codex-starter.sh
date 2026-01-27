@@ -4,8 +4,7 @@ set -euo pipefail
 repo_url="https://github.com/Skarian/codex-starter"
 branch="main"
 archive_url="${repo_url}/archive/refs/heads/${branch}.tar.gz"
-script_path="scripts/sync-codex-starter.sh"
-exclude_files=("README.md" "$script_path")
+exclude_paths=("README.md" ".gitignore" "scripts/")
 
 tmp_dir="$(mktemp -d)"
 cleanup() {
@@ -32,17 +31,16 @@ if [[ -z "$src_root" || ! -d "$src_root" ]]; then
   exit 1
 fi
 
-while IFS= read -r -d '' dir; do
-  rel_dir="${dir#"$src_root"/}"
-  if [[ -n "$rel_dir" ]]; then
-    mkdir -p "$rel_dir"
-  fi
-done < <(find "$src_root" -type d -print0)
+mkdir -p .agent/execplans/active .agent/execplans/archive
 
 should_skip() {
   local rel_path="$1"
-  for excluded in "${exclude_files[@]}"; do
-    if [[ "$rel_path" == "$excluded" ]]; then
+  for excluded in "${exclude_paths[@]}"; do
+    if [[ "$excluded" == */ ]]; then
+      if [[ "$rel_path" == "$excluded"* ]]; then
+        return 0
+      fi
+    elif [[ "$rel_path" == "$excluded" ]]; then
       return 0
     fi
   done
@@ -52,7 +50,13 @@ should_skip() {
 confirm_overwrite() {
   local target="$1"
   printf "Overwrite %s? [y/N] " "$target"
-  read -r reply
+  local reply=""
+  if [[ -r /dev/tty ]]; then
+    read -r reply </dev/tty
+  else
+    echo
+    return 1
+  fi
   [[ "$reply" == "y" || "$reply" == "Y" ]]
 }
 

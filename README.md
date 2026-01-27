@@ -4,6 +4,16 @@ This is my personal setup for using codex, I expect it to change over time.
 
 I've found this approach to deliver significantly higher code quality than the default experience, and is frankly a pleasant development experience
 
+### Quick start (sync the starter into your repo)
+
+This is not an installer — it pulls the latest files from this repo into your current directory and prompts before overwriting anything. It excludes `README.md`, `.gitignore`, and `scripts/`.
+
+```
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/Skarian/codex-starter/main/scripts/sync-codex-starter.sh)"
+```
+
+Works on macOS and Linux. On Windows, use WSL or Git Bash.
+
 ### Starter Goals:
 
 - Avoid vibe-coding by providing explicit guidance and structure
@@ -38,20 +48,9 @@ I've found this approach to deliver significantly higher code quality than the d
 web_search_request = true
 ```
 
-### How to use the starter to bootstrap a new project
+### Project-specific setup
 
-1. Copy `AGENTS.md`, `CONTINUITY.md`, and the `.agent/` directory into the repo (including `.agent/execplans/INDEX.md`).
-2. In `AGENTS.md`, fill in **Project-specific configuration** (build/lint/test/typecheck/docs commands).
-
-### Sync script (optional)
-
-Run this from the repo root to pull the latest starter files (prompts before each overwrite, never deletes, excludes `README.md` and the sync script itself):
-
-```
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/Skarian/codex-starter/main/scripts/sync-codex-starter.sh)"
-```
-
-Works on macOS and Linux. On Windows, use WSL or Git Bash.
+In `AGENTS.md`, fill in **Project-specific configuration** (build/lint/test/typecheck/docs commands).
 
 ### TODOs:
 
@@ -64,4 +63,5 @@ Works on macOS and Linux. On Windows, use WSL or Git Bash.
   - source code modularity and repo structure
 
 ### Sources
+
 - https://developers.openai.com/cookbook/articles/codex_exec_plans
