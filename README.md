@@ -20,7 +20,7 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/Skarian/codex-starter/ma
 ### How to customize this setup
 
 - If you want to tailor this setup, clone the repo locally first
-- If you want to use Codex (or another coding agent) while editing, run `bash scripts/toggle-agents.sh` (or `chmod +x scripts/toggle-agents.sh` and `./scripts/toggle-agents.sh`) to swap `AGENTS.md` with `AGENTS-draft.md` and prevent the agent from treating it as live instructions
+- If you want to use Codex (or another coding agent) while editing, run `bash scripts/toggle-agents.sh` (or `chmod +x scripts/toggle-agents.sh` and `./scripts/toggle-agents.sh`) to toggle renaming `AGENTS.md` as `AGENTS-draft.md` to prevent the agent from treating it as live instructions
 
 ### Starter Goals:
 
