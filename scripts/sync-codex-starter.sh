@@ -4,7 +4,7 @@ set -euo pipefail
 repo_url="https://github.com/Skarian/codex-starter"
 branch="main"
 archive_url="${repo_url}/archive/refs/heads/${branch}.tar.gz"
-exclude_paths=("README.md" ".gitignore" "scripts/")
+exclude_paths=("README.md" ".gitignore" "notes/" "scripts/")
 
 tmp_dir="$(mktemp -d)"
 cleanup() {

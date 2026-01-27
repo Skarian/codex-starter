@@ -56,16 +56,6 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/Skarian/codex-starter/ma
 web_search_request = true
 ```
 
-### TODOs:
-
-- Explore adding skills (ex: git worktrees)
-- Explore MCPs (ex: Context7)
-- Explore increasing token efficiency across instructions
-- Add guidance for the following:
-  - tests
-  - naming schemes
-  - source code modularity and repo structure
-
 ### Sources
 
 - PLANS.md inspiration: https://developers.openai.com/cookbook/articles/codex_exec_plans
