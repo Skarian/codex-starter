@@ -37,7 +37,7 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/Skarian/codex-starter/ma
 - **[.agent/PLANS.md](.agent/PLANS.md)**  
   The ExecPlan spec: how to write plans that are self-contained, how to track progress/decisions, and how to store/name/archive them
 
-- **[CONTINUITY.md](CONTINUITY.md)**  
+- **[.agent/CONTINUITY.md](.agent/CONTINUITY.md)**  
   The "single source of truth": one durable place to keep Goal/Now/Next/Decisions/Receipts so new sessions start contextualized
 
 - **[.agent/execplans/INDEX.md](.agent/execplans/INDEX.md)**  
@@ -70,4 +70,4 @@ web_search_request = true
 
 - PLANS.md inspiration: https://developers.openai.com/cookbook/articles/codex_exec_plans
 - AGENTS.md framework: https://www.reddit.com/r/codex/comments/1qli5m3/comment/o1fjzgf/
-- CONTINUITY.md idea: https://www.reddit.com/r/codex/comments/1qli5m3/comment/o1fw2gr/
+- .agent/CONTINUITY.md idea: https://www.reddit.com/r/codex/comments/1qli5m3/comment/o1fw2gr/

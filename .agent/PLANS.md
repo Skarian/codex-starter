@@ -77,7 +77,7 @@ When the work is complete:
 3. Move the file from `active/` to `archive/` (optionally group by year).
 4. Set `Status: ARCHIVED` after the move.
 5. Update `.agent/execplans/INDEX.md` (move the entry; add outcome + archive date).
-6. Add a receipt in `CONTINUITY.md` pointing to the archived ExecPlan and the key verification commands/outcomes.
+6. Add a receipt in `.agent/CONTINUITY.md` pointing to the archived ExecPlan and the key verification commands/outcomes.
 
 ## Requirements
 

@@ -45,17 +45,17 @@ When writing complex features or significant refactors, use an **ExecPlan** as d
 
 ## Continuity Ledger (compaction-safe)
 
-Maintain a single continuity file for this workspace: **`CONTINUITY.md`**.  
-`CONTINUITY.md` is the canonical briefing designed to survive compaction; do not rely on earlier chat/tool output unless it’s reflected there.
+Maintain a single continuity file for this workspace: **`.agent/CONTINUITY.md`**.  
+`.agent/CONTINUITY.md` is the canonical briefing designed to survive compaction; do not rely on earlier chat/tool output unless it’s reflected there.
 
 **Non-optional initialization:**
 
-- If `CONTINUITY.md` is missing, ask the user to supply it from the codex-starter repo (`https://github.com/Skarian/codex-starter`).
+- If `.agent/CONTINUITY.md` is missing, ask the user to supply it from the codex-starter repo (`https://github.com/Skarian/codex-starter`).
 
 ### Operating rule
 
-- At the start of each assistant turn: **read `CONTINUITY.md` before acting**.
-- Update `CONTINUITY.md` only when there is a meaningful delta in:
+- At the start of each assistant turn: **read `.agent/CONTINUITY.md` before acting**.
+- Update `.agent/CONTINUITY.md` only when there is a meaningful delta in:
   - Goal / success criteria
   - Invariants / constraints
   - Decisions
@@ -66,7 +66,7 @@ Maintain a single continuity file for this workspace: **`CONTINUITY.md`**.
 
 ### Keep it bounded (anti-bloat)
 
-- Keep `CONTINUITY.md` short and high-signal:
+- Keep `.agent/CONTINUITY.md` short and high-signal:
   - `Snapshot`: ≤ 25 lines
   - `Done (recent)`: ≤ 7 bullets
   - `Working set`: ≤ 12 paths
@@ -137,7 +137,7 @@ Search early and often when you hit any of these:
 
 - Summarize conclusions in your own words.
 - Attribute key sources in your response when they materially affect decisions.
-- Record durable outcomes in `CONTINUITY.md` under `Receipts` with: timestamp + `[TOOL]` + what was learned + source pointer(s).
+- Record durable outcomes in `.agent/CONTINUITY.md` under `Receipts` with: timestamp + `[TOOL]` + what was learned + source pointer(s).
 
 ### Safety + confidentiality during search
 
@@ -247,7 +247,7 @@ Then present a recommendation (or 2–3 viable options) in the numbered list and
   - justify it (what problem it solves, why built-in code isn’t enough),
   - consider licensing and security risk.
 - If there are multiple plausible libraries or a dependency is a significant decision: ask the user and help them qualify the choice.
-- Record the chosen dependency decision in `CONTINUITY.md` (Decision + Receipt).
+- Record the chosen dependency decision in `.agent/CONTINUITY.md` (Decision + Receipt).
 
 ---
 
@@ -294,7 +294,7 @@ A task is done when:
   - errors/warnings addressed (or explicitly listed and agreed as out-of-scope),
   - plus tests/typecheck as applicable,
 - follow-ups are listed if anything was intentionally left out,
-- `CONTINUITY.md` is updated if the change materially affects goal/state/decisions.
+- `.agent/CONTINUITY.md` is updated if the change materially affects goal/state/decisions.
 
 ---
 
