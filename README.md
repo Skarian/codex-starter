@@ -20,7 +20,7 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/Skarian/codex-starter/ma
 ### How to customize this setup
 
 - If you want to tailor this setup, clone the repo locally first
-- If you want to use Codex (or another coding agent) while editing this starter, run `bash scripts/dev.sh` (or `chmod +x scripts/dev.sh` and `./scripts/dev.sh`) to toggle dev mode. Dev mode creates `AGENTS.override.md` and adds a guard to `AGENTS.md`; running it again removes the guard and override. To change the guard or override text, edit `scripts/GUARD_TEMPLATE.md` and `scripts/OVERRIDE_TEMPLATE.md`.
+- If you want to use Codex (or another coding agent) while editing this starter, run `bash scripts/dev-toggle.sh` (or `chmod +x scripts/dev-toggle.sh` and `./scripts/dev-toggle.sh`) to toggle dev mode. Dev mode creates `AGENTS.override.md` and adds a guard to `AGENTS.md`; running it again removes the guard and override. To change the guard or override text, edit `scripts/GUARD_TEMPLATE.md` and `scripts/OVERRIDE_TEMPLATE.md`.
 
 ### Starter Goals:
 
