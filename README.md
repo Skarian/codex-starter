@@ -6,13 +6,20 @@ I've found this approach to deliver significantly higher code quality than the d
 
 ### Quick start (sync the starter into your repo)
 
-This is not an installer — it pulls the latest files from this repo into your current directory and prompts before overwriting anything. It excludes `README.md`, `.gitignore`, and `scripts/`.
+- Copies the latest starter files into the current directory
+- Asks before overwriting any existing file
+- Skips `README.md`, `.gitignore`, and `scripts/`
+- Leaves your repo’s `.git` and history untouched
 
 ```
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/Skarian/codex-starter/main/scripts/sync-codex-starter.sh)"
 ```
 
-Works on macOS and Linux. On Windows, use WSL or Git Bash.
+Works on macOS and Linux. On Windows, use WSL or Git Bash
+
+### Project-specific setup
+
+In `AGENTS.md`, fill in **Project-specific configuration** (build/lint/test/typecheck/docs commands)
 
 ### Starter Goals:
 
@@ -24,7 +31,7 @@ Works on macOS and Linux. On Windows, use WSL or Git Bash.
 ### What's in the repo:
 
 - **[AGENTS.md](AGENTS.md)**  
-  The operating contract: explore, review findings, follow guidance, pick dependencies, execute, update docs, verify.
+  The operating contract: explore, review findings, follow guidance, pick dependencies, execute, update docs, verify
 
 - **[.agent/PLANS.md](.agent/PLANS.md)**  
   The ExecPlan spec: how to write plans that are self-contained, how to track progress/decisions, and how to store/name/archive them
@@ -48,10 +55,6 @@ Works on macOS and Linux. On Windows, use WSL or Git Bash.
 web_search_request = true
 ```
 
-### Project-specific setup
-
-In `AGENTS.md`, fill in **Project-specific configuration** (build/lint/test/typecheck/docs commands).
-
 ### TODOs:
 
 - Explore adding skills (ex: git worktrees)
@@ -61,6 +64,10 @@ In `AGENTS.md`, fill in **Project-specific configuration** (build/lint/test/type
   - tests
   - naming schemes
   - source code modularity and repo structure
+
+### Development note
+
+If you plan to use Codex to modify this repo, rename `AGENTS.md` to something else first; otherwise Codex may treat it as instructions and start populating the templates
 
 ### Sources
 
