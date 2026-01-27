@@ -32,8 +32,7 @@ If any required directories are missing, create them inside the repo (never outs
 
 The index is required.
 
-- If `.agent/execplans/INDEX.md` is missing, initialize it by copying `.agent/INDEX_INIT.md` → `.agent/execplans/INDEX.md`.
-- If `.agent/INDEX_INIT.md` is missing, treat the repo as misconfigured and stop; ask the user to add it.
+- If `.agent/execplans/INDEX.md` is missing, ask the user to supply it from the codex-starter repo (`https://github.com/Skarian/codex-starter`).
 
 ### Index maintenance rules
 

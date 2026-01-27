@@ -39,7 +39,7 @@ When writing complex features or significant refactors, use an **ExecPlan** as d
 
 - The canonical rules for where ExecPlans live, how they are named, how progress is tracked, and how they are archived are defined in `.agent/PLANS.md`.
 - The ExecPlan index is **required**: `.agent/execplans/INDEX.md`.
-  - If missing, initialize it by copying `.agent/INDEX_INIT.md` → `.agent/execplans/INDEX.md` (non-optional).
+  - If missing, ask the user to supply it from the codex-starter repo (`https://github.com/Skarian/codex-starter`).
 
 ---
 
@@ -50,8 +50,7 @@ Maintain a single continuity file for this workspace: **`CONTINUITY.md`**.
 
 **Non-optional initialization:**
 
-- If `CONTINUITY.md` is missing, initialize it by copying `.agent/CONTINUITY_INIT.md` → `CONTINUITY.md`.
-- If `.agent/CONTINUITY_INIT.md` is missing, treat the repo as misconfigured and stop; ask the user to add it.
+- If `CONTINUITY.md` is missing, ask the user to supply it from the codex-starter repo (`https://github.com/Skarian/codex-starter`).
 
 ### Operating rule
 
