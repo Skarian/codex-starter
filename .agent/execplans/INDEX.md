@@ -4,6 +4,7 @@ This file tracks all ExecPlans for this repository. It is required by `.agent/PL
 
 ## Conventions
 
+- Draft plans live in: `.agent/execplans/draft/`
 - Active plans live in: `.agent/execplans/active/`
 - Archived plans live in: `.agent/execplans/archive/`
 - Plan filename format: `EP-YYYY-MM-DD__slug.md`
@@ -20,6 +21,12 @@ For archived plans, also include:
 - `Archived:YYYY-MM-DD` — `Outcome:<one line>`
 
 Keep entries short, greppable, and consistent.
+
+If the user request does not specify plan type, ask: `What type is this ExecPlan: draft, active, or archive?` before adding or moving entries.
+
+## Draft ExecPlans
+
+- (none yet)
 
 ## Active ExecPlans
 

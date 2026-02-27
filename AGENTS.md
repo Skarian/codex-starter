@@ -34,6 +34,7 @@ When writing complex features or significant refactors, use an **ExecPlan** as d
 - `.agent/PLANS.md` is the **source of truth** for plan format and process.
 - Do **not** invent a new planning framework in chat.
 - If `.agent/PLANS.md` says to create/update plan artifacts, do it and keep them current while executing.
+- If an ExecPlan type is unspecified, ask the user to classify it as `draft`, `active`, or `archive` before creating or updating plan artifacts.
 
 **ExecPlan storage + lifecycle:**
 

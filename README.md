@@ -41,10 +41,10 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/Skarian/codex-starter/ma
   The "single source of truth": one durable place to keep Goal/Now/Next/Decisions/Receipts so new sessions start contextualized
 
 - **[.agent/execplans/INDEX.md](.agent/execplans/INDEX.md)**  
-  The plan registry: tracks active vs archived ExecPlans over time so work doesn’t disappear into a pile of markdown files
+  The plan registry: tracks draft, active, and archived ExecPlans over time so work doesn’t disappear into a pile of markdown files
 
-- **[.agent/execplans/active/](.agent/execplans/active/) + [.agent/execplans/archive/](.agent/execplans/archive/)**  
-  The filing cabinet: where plans live while they’re in progress or when they are archived
+- **[.agent/execplans/draft/](.agent/execplans/draft/) + [.agent/execplans/active/](.agent/execplans/active/) + [.agent/execplans/archive/](.agent/execplans/archive/)**  
+  The filing cabinet: where plans live as draft research/future work, during execution, or after archival
 
 ### Requirements:
 

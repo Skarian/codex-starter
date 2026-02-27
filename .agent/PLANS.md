@@ -20,13 +20,26 @@ ExecPlans are repo artifacts. They must live inside the repository, be easy to l
 
 By default, store ExecPlans under `.agent/execplans/`:
 
+- Draft plans: `.agent/execplans/draft/`
 - Active plans: `.agent/execplans/active/`
 - Archived plans: `.agent/execplans/archive/`
 - Required index: `.agent/execplans/INDEX.md`
 
 If the repo’s `AGENTS.md` defines an override directory under “Project-specific configuration”, follow that override.
 
-If any required directories are missing, create them inside the repo (never outside). Keep `active/` and `archive/` tracked in git (use `.gitkeep` if needed).
+If any required directories are missing, create them inside the repo (never outside). Keep `draft/`, `active/`, and `archive/` tracked in git (use `.gitkeep` if needed).
+
+### ExecPlan type selection (required)
+
+Every ExecPlan must be explicitly classified as one of these types:
+
+- `draft`: research projects, future execution plans, or parked work that is not yet approved for execution.
+- `active`: work currently being executed or about to be executed.
+- `archive`: historical record of completed, cancelled, or superseded plans.
+
+If the user's request does not specify a type, ask this clarification before creating, moving, or indexing the plan: `What type is this ExecPlan: draft, active, or archive?`
+
+Type transitions are intentionally non-linear. Common transitions include `draft -> active`, `active -> draft`, `draft -> archive`, and `active -> archive`.
 
 ### Non-optional index initialization
 
@@ -36,8 +49,10 @@ The index is required.
 
 ### Index maintenance rules
 
+- When you create a new ExecPlan file in `draft/`, add an entry to `INDEX.md` under `Draft ExecPlans`.
 - When you create a new ExecPlan file in `active/`, add an entry to `INDEX.md` under `Active ExecPlans`.
-- When you archive a plan, move its entry from `Active ExecPlans` to `Archived ExecPlans` and include a one-line outcome.
+- When you create or move a plan into `archive/`, place its entry under `Archived ExecPlans` and include a one-line outcome plus `Archived:YYYY-MM-DD`.
+- When a plan type changes, move its entry to the matching section and update the `Path:` field.
 - Keep the entry’s `Status` and `Last Updated` consistent with the plan file’s header.
 
 Use the entry format specified inside `.agent/execplans/INDEX.md` (keep it consistent and easily greppable).
@@ -70,13 +85,13 @@ Update `Last Updated` whenever you make a meaningful change to the plan.
 
 Never delete ExecPlans.
 
-When the work is complete:
+When a plan should become a historical record (for example, completed, cancelled, or superseded):
 
 1. Ensure the plan is current: Progress reflects reality, Decision Log includes key decisions, Outcomes & Retrospective summarizes what shipped and what didn’t.
-2. Set `Status: DONE`.
-3. Move the file from `active/` to `archive/` (optionally group by year).
+2. If the work finished, set `Status: DONE` before archiving.
+3. Move the file from `draft/` or `active/` to `archive/` (optionally group by year).
 4. Set `Status: ARCHIVED` after the move.
-5. Update `.agent/execplans/INDEX.md` (move the entry; add outcome + archive date).
+5. Update `.agent/execplans/INDEX.md` (move the entry from `Draft ExecPlans` or `Active ExecPlans` to `Archived ExecPlans`; add outcome + archive date).
 6. Add a receipt in `.agent/CONTINUITY.md` pointing to the archived ExecPlan and the key verification commands/outcomes.
 
 ## Requirements
