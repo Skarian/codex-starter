@@ -1,12 +1,12 @@
 # ExecPlan Index
 
-This file tracks all ExecPlans for this repository. It is required by `.agent/PLANS.md`.
+This file tracks all ExecPlans for this repository. It is required by `.agents/PLANS.md`.
 
 ## Conventions
 
-- Draft plans live in: `.agent/execplans/draft/`
-- Active plans live in: `.agent/execplans/active/`
-- Archived plans live in: `.agent/execplans/archive/`
+- Draft plans live in: `.agents/execplans/draft/`
+- Active plans live in: `.agents/execplans/active/`
+- Archived plans live in: `.agents/execplans/archive/`
 - Plan filename format: `EP-YYYY-MM-DD__slug.md`
 - Plan header fields live inside each plan file and must match the index entry.
 

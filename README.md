@@ -34,16 +34,16 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/Skarian/codex-starter/ma
 - **[AGENTS.md](AGENTS.md)**  
   The operating contract: explore, review findings, follow guidance, pick dependencies, execute, update docs, verify
 
-- **[.agent/PLANS.md](.agent/PLANS.md)**  
+- **[.agents/PLANS.md](.agents/PLANS.md)**  
   The ExecPlan spec: how to write plans that are self-contained, how to track progress/decisions, and how to store/name/archive them
 
-- **[.agent/CONTINUITY.md](.agent/CONTINUITY.md)**  
+- **[.agents/CONTINUITY.md](.agents/CONTINUITY.md)**  
   The "single source of truth": one durable place to keep Goal/Now/Next/Decisions/Receipts so new sessions start contextualized
 
-- **[.agent/execplans/INDEX.md](.agent/execplans/INDEX.md)**  
+- **[.agents/execplans/INDEX.md](.agents/execplans/INDEX.md)**  
   The plan registry: tracks draft, active, and archived ExecPlans over time so work doesn’t disappear into a pile of markdown files
 
-- **[.agent/execplans/draft/](.agent/execplans/draft/) + [.agent/execplans/active/](.agent/execplans/active/) + [.agent/execplans/archive/](.agent/execplans/archive/)**  
+- **[.agents/execplans/draft/](.agents/execplans/draft/) + [.agents/execplans/active/](.agents/execplans/active/) + [.agents/execplans/archive/](.agents/execplans/archive/)**  
   The filing cabinet: where plans live as draft research/future work, during execution, or after archival
 
 ### Requirements:
@@ -60,4 +60,4 @@ web_search_request = true
 
 - PLANS.md inspiration: https://developers.openai.com/cookbook/articles/codex_exec_plans
 - AGENTS.md framework: https://www.reddit.com/r/codex/comments/1qli5m3/comment/o1fjzgf/
-- .agent/CONTINUITY.md idea: https://www.reddit.com/r/codex/comments/1qli5m3/comment/o1fw2gr/
+- .agents/CONTINUITY.md idea: https://www.reddit.com/r/codex/comments/1qli5m3/comment/o1fw2gr/

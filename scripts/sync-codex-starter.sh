@@ -31,7 +31,7 @@ if [[ -z "$src_root" || ! -d "$src_root" ]]; then
   exit 1
 fi
 
-mkdir -p .agent/execplans/draft .agent/execplans/active .agent/execplans/archive
+mkdir -p .agents/execplans/draft .agents/execplans/active .agents/execplans/archive
 
 should_skip() {
   local rel_path="$1"

@@ -18,12 +18,12 @@ ExecPlans are repo artifacts. They must live inside the repository, be easy to l
 
 ### Where ExecPlans live
 
-By default, store ExecPlans under `.agent/execplans/`:
+By default, store ExecPlans under `.agents/execplans/`:
 
-- Draft plans: `.agent/execplans/draft/`
-- Active plans: `.agent/execplans/active/`
-- Archived plans: `.agent/execplans/archive/`
-- Required index: `.agent/execplans/INDEX.md`
+- Draft plans: `.agents/execplans/draft/`
+- Active plans: `.agents/execplans/active/`
+- Archived plans: `.agents/execplans/archive/`
+- Required index: `.agents/execplans/INDEX.md`
 
 If the repo’s `AGENTS.md` defines an override directory under “Project-specific configuration”, follow that override.
 
@@ -45,7 +45,7 @@ Type transitions are intentionally non-linear. Common transitions include `draft
 
 The index is required.
 
-- If `.agent/execplans/INDEX.md` is missing, ask the user to supply it from the codex-starter repo (`https://github.com/Skarian/codex-starter`).
+- If `.agents/execplans/INDEX.md` is missing, ask the user to supply it from the codex-starter repo (`https://github.com/Skarian/codex-starter`).
 
 ### Index maintenance rules
 
@@ -55,7 +55,7 @@ The index is required.
 - When a plan type changes, move its entry to the matching section and update the `Path:` field.
 - Keep the entry’s `Status` and `Last Updated` consistent with the plan file’s header.
 
-Use the entry format specified inside `.agent/execplans/INDEX.md` (keep it consistent and easily greppable).
+Use the entry format specified inside `.agents/execplans/INDEX.md` (keep it consistent and easily greppable).
 
 ### File naming convention
 
@@ -91,8 +91,8 @@ When a plan should become a historical record (for example, completed, cancelled
 2. If the work finished, set `Status: DONE` before archiving.
 3. Move the file from `draft/` or `active/` to `archive/` (optionally group by year).
 4. Set `Status: ARCHIVED` after the move.
-5. Update `.agent/execplans/INDEX.md` (move the entry from `Draft ExecPlans` or `Active ExecPlans` to `Archived ExecPlans`; add outcome + archive date).
-6. Add a receipt in `.agent/CONTINUITY.md` pointing to the archived ExecPlan and the key verification commands/outcomes.
+5. Update `.agents/execplans/INDEX.md` (move the entry from `Draft ExecPlans` or `Active ExecPlans` to `Archived ExecPlans`; add outcome + archive date).
+6. Add a receipt in `.agents/CONTINUITY.md` pointing to the archived ExecPlan and the key verification commands/outcomes.
 
 ## Requirements
 

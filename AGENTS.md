@@ -27,36 +27,36 @@ If you can’t verify, say so and provide exact steps the user can run.
 
 ## ExecPlans
 
-When writing complex features or significant refactors, use an **ExecPlan** as defined in **`.agent/PLANS.md`**, from design through implementation.
+When writing complex features or significant refactors, use an **ExecPlan** as defined in **`.agents/PLANS.md`**, from design through implementation.
 
 **Planning rules:**
 
-- `.agent/PLANS.md` is the **source of truth** for plan format and process.
+- `.agents/PLANS.md` is the **source of truth** for plan format and process.
 - Do **not** invent a new planning framework in chat.
-- If `.agent/PLANS.md` says to create/update plan artifacts, do it and keep them current while executing.
+- If `.agents/PLANS.md` says to create/update plan artifacts, do it and keep them current while executing.
 - If an ExecPlan type is unspecified, ask the user to classify it as `draft`, `active`, or `archive` before creating or updating plan artifacts.
 
 **ExecPlan storage + lifecycle:**
 
-- The canonical rules for where ExecPlans live, how they are named, how progress is tracked, and how they are archived are defined in `.agent/PLANS.md`.
-- The ExecPlan index is **required**: `.agent/execplans/INDEX.md`.
+- The canonical rules for where ExecPlans live, how they are named, how progress is tracked, and how they are archived are defined in `.agents/PLANS.md`.
+- The ExecPlan index is **required**: `.agents/execplans/INDEX.md`.
   - If missing, ask the user to supply it from the codex-starter repo (`https://github.com/Skarian/codex-starter`).
 
 ---
 
 ## Continuity Ledger (compaction-safe)
 
-Maintain a single continuity file for this workspace: **`.agent/CONTINUITY.md`**.  
-`.agent/CONTINUITY.md` is the canonical briefing designed to survive compaction; do not rely on earlier chat/tool output unless it’s reflected there.
+Maintain a single continuity file for this workspace: **`.agents/CONTINUITY.md`**.  
+`.agents/CONTINUITY.md` is the canonical briefing designed to survive compaction; do not rely on earlier chat/tool output unless it’s reflected there.
 
 **Non-optional initialization:**
 
-- If `.agent/CONTINUITY.md` is missing, ask the user to supply it from the codex-starter repo (`https://github.com/Skarian/codex-starter`).
+- If `.agents/CONTINUITY.md` is missing, ask the user to supply it from the codex-starter repo (`https://github.com/Skarian/codex-starter`).
 
 ### Operating rule
 
-- At the start of each assistant turn: **read `.agent/CONTINUITY.md` before acting**.
-- Update `.agent/CONTINUITY.md` only when there is a meaningful delta in:
+- At the start of each assistant turn: **read `.agents/CONTINUITY.md` before acting**.
+- Update `.agents/CONTINUITY.md` only when there is a meaningful delta in:
   - Goal / success criteria
   - Invariants / constraints
   - Decisions
@@ -67,7 +67,7 @@ Maintain a single continuity file for this workspace: **`.agent/CONTINUITY.md`**
 
 ### Keep it bounded (anti-bloat)
 
-- Keep `.agent/CONTINUITY.md` short and high-signal:
+- Keep `.agents/CONTINUITY.md` short and high-signal:
   - `Snapshot`: ≤ 25 lines
   - `Done (recent)`: ≤ 7 bullets
   - `Working set`: ≤ 12 paths
@@ -138,7 +138,7 @@ Search early and often when you hit any of these:
 
 - Summarize conclusions in your own words.
 - Attribute key sources in your response when they materially affect decisions.
-- Record durable outcomes in `.agent/CONTINUITY.md` under `Receipts` with: timestamp + `[TOOL]` + what was learned + source pointer(s).
+- Record durable outcomes in `.agents/CONTINUITY.md` under `Receipts` with: timestamp + `[TOOL]` + what was learned + source pointer(s).
 
 ### Safety + confidentiality during search
 
@@ -164,7 +164,7 @@ Then:
 - Present findings/questions/tradeoffs as a numbered list (see “Discussion protocol”).
 - Propose:
   - a short plan (2–6 bullets) for immediate steps, **and**
-  - explicitly reference the longer ExecPlan process in `.agent/PLANS.md` (and any required artifacts) so it’s clear what governs complex work.
+  - explicitly reference the longer ExecPlan process in `.agents/PLANS.md` (and any required artifacts) so it’s clear what governs complex work.
 - Wait for the user to resolve numbered items; iterate until agreement.
 - Execute with small, reviewable diffs.
 
@@ -248,7 +248,7 @@ Then present a recommendation (or 2–3 viable options) in the numbered list and
   - justify it (what problem it solves, why built-in code isn’t enough),
   - consider licensing and security risk.
 - If there are multiple plausible libraries or a dependency is a significant decision: ask the user and help them qualify the choice.
-- Record the chosen dependency decision in `.agent/CONTINUITY.md` (Decision + Receipt).
+- Record the chosen dependency decision in `.agents/CONTINUITY.md` (Decision + Receipt).
 
 ---
 
@@ -295,7 +295,7 @@ A task is done when:
   - errors/warnings addressed (or explicitly listed and agreed as out-of-scope),
   - plus tests/typecheck as applicable,
 - follow-ups are listed if anything was intentionally left out,
-- `.agent/CONTINUITY.md` is updated if the change materially affects goal/state/decisions.
+- `.agents/CONTINUITY.md` is updated if the change materially affects goal/state/decisions.
 
 ---
 
