@@ -258,6 +258,7 @@ Then present a recommendation (or 2–3 viable options) in the numbered list and
 - Preserve existing style, conventions, and architecture unless the task is explicitly a refactor.
 - Prefer patch-style edits (small, reviewable diffs) over full-file rewrites.
 - Don’t mix concerns: keep “mechanical” formatting changes separate from logic changes when possible.
+- Commit messages must follow a common structure (e.g., `type(scope): summary`) and must not reference `.agents` artifacts (e.g., `.agents/CONTINUITY.md`, `.agents/execplans/INDEX.md`).
 
 ---
 
